@@ -11,7 +11,7 @@ resource "azurerm_network_security_group" "bastion_nsg" {
     protocol                   = "*"
     source_port_range          = "*"
     destination_port_range     = "22"
-    source_address_prefix      = "*"
+    source_address_prefix      = "INTERNET"
     destination_address_prefix = "*"
   }
 

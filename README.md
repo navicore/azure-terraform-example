@@ -1,7 +1,10 @@
 Terraform for Azure VNets w/ Bastion
 ---------
 
-#QUICK START
+An example of using terraform to call Azure APIs to provision a vnet with
+subnets, network security groups,  and a bastion host.
+
+# QUICK START
 
 create a service principal if you haven't already
 
@@ -9,7 +12,7 @@ create a service principal if you haven't already
 az ad sp create-for-rbac -n "mycloud-1-sp" --role="Contributor"
 ```
 
-## set these env vars
+### set these env vars
 
 ```bash
 export ARM_SUBSCRIPTION_ID=
@@ -18,11 +21,11 @@ export ARM_CLIENT_SECRET=
 export ARM_TENANT_ID=
 ```
 
-## edit
+### edit
 
 * edit `terraform.tfvars` using `terraform.tfvars.example` file
 
-## run
+### run
 
 * remove any `terraform.tfstate` files unless this is a restart
 
@@ -30,7 +33,7 @@ export ARM_TENANT_ID=
 terraform apply
 ```
 
-## Trouble Shooting
+# Trouble Shooting
 
 * Sometimes fails on a 'resource group not found' error.  Just restart, ie `terraform apply` and it will recover.
 
