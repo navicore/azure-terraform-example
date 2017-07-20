@@ -1,0 +1,16 @@
+resource_base_name  = "mycloud"
+resource_suffix     = "example"
+
+private_key_path    = "~/mycloudkeys/id_rsa"
+public_key_path     = "~/mycloudkeys/id_rsa.pub"
+
+image = {
+	publisher       = "OpenLogic"
+	offer           = "CentOS"
+	sku             = "7.2"
+	version         = "latest"
+}
+
+vm_user             = "localadmin"
+location            = "eastus"
+
