@@ -1,4 +1,4 @@
-Terraform for Container Orchestration Azure VNets w/ Bastion
+Terraform for Azure VNets w/ Bastion
 ---------
 
 #QUICK START
