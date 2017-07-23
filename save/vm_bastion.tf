@@ -10,13 +10,14 @@ resource "azurerm_network_interface" "bastion" {
   name                      = "${azurerm_resource_group.mycloud.name}-bastion"
   location                  = "${azurerm_resource_group.mycloud.location}"
   resource_group_name       = "${azurerm_resource_group.mycloud.name}"
+  //network_security_group_id = "/subscriptions/71387571-4c0f-4bd4-81b8-2a2c63169be1/resourceGroups/s00159test/providers/Microsoft.Network/networkSecurityGroups/s00159test-bastion-nsg"
   network_security_group_id = "${azurerm_network_security_group.bastion_nsg.id}"
 
   ip_configuration {
     name                          = "${azurerm_resource_group.mycloud.name}-bastion"
     private_ip_address_allocation = "static"
     private_ip_address            = "10.0.1.${var.bastion_private_ip_address_index}"
-    subnet_id                     = "${azurerm_subnet.bastion_subnet.id}"
+    subnet_id                     = "/subscriptions/71387571-4c0f-4bd4-81b8-2a2c63169be1/resourceGroups/mycloudexample/providers/Microsoft.Network/virtualNetworks/mycloudexample/subnets/mycloudexample-bastion-subnet"
     public_ip_address_id          = "${azurerm_public_ip.bastion.id}"
   }
 }
