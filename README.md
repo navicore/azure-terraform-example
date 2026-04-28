@@ -1,3 +1,8 @@
+<!-- ghmig:moved -->
+> **This repository has moved to [https://git.navicore.tech/navicore/azure-terraform-example](https://git.navicore.tech/navicore/azure-terraform-example).**
+>
+> The GitHub copy is archived and no longer maintained.
+
 Terraform for Azure VNets w/ Bastion
 ---------
 
@@ -36,4 +41,3 @@ terraform apply
 # Trouble Shooting
 
 * Sometimes fails on a 'resource group not found' error.  Just restart, ie `terraform apply` and it will recover.
-
